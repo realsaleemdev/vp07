@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Popup Modal Box (HTML + CSS)</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Icons (optional) -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+  <section class="wrap">
+    <!-- CSS-only toggle (checkbox hack) -->
+    <input class="modal-toggle" type="checkbox" id="modal" />
+
+    <!-- Profile card / trigger -->
+    <div class="profile">
+      <div class="profile-img" aria-hidden="true"></div>
+      <span class="name">Muhammad Saleem</span>
+      <span class="profession">Web & App Designer</span>
+
+      <label class="cta" for="modal">
+        <i class='bx bxs-bell'></i>
+        <span>Subscribe</span>
+      </label>
+    </div>
+
+    <!-- Modal overlay -->
+    <label class="overlay" for="modal" aria-hidden="true"></label>
+
+    <!-- Modal box -->
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <label class="close" for="modal" aria-label="Close">
+        <i class='bx bx-x'></i>
+      </label>
+
+      <div class="modal-head">
+        <div class="avatar" aria-hidden="true"></div>
+        <div class="head-text">
+          <div id="modalTitle" class="title">Web Push Notification</div>
+          <div class="subtitle">Get updates in your inbox</div>
+        </div>
+      </div>
+
+      <p class="desc">
+        Subscribe to receive the latest tutorials, tips, and updates.
+      </p>
+
+      <form class="form" action="#" onsubmit="return false;">
+        <input type="email" placeholder="Enter your email" required />
+        <div class="actions">
+          <label class="btn btn-ghost" for="modal">Not now</label>
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
